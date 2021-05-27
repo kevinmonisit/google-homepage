@@ -2,6 +2,10 @@ html, body {
     height:100%;
 }
 
+:root {
+    --font-color: rgb(54,54,54);
+}
+
 #flex-wrapper {
     display:flex;
     height:100%;
@@ -23,7 +27,7 @@ html, body {
 
 #top-header a {
     text-decoration:none;
-    color: rgb(54, 54, 54);
+    color: var(--font-color, rgb(54, 54, 54));
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -124,7 +128,7 @@ html, body {
     height:auto;
 
     margin: -60px 0;
-    margin-top:-80px;
+    margin-top:-60px;
 
 }
 
@@ -148,7 +152,32 @@ html, body {
     width:100%;
     background-color: cyan;
     flex-grow: 8;
-    min-height:150px;
+    min-height:20px;
+}
+
+#search-bar-buttons {
+    display:flex;
+    flex-direction: row;
+
+    padding:20px;
+}
+
+#search-bar-buttons > button{
+    margin:10px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+
+    border-radius: 3px;
+    padding:10px 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--font-color, grey);
+
+}
+
+#search-bar-buttons > button:hover{
+    box-shadow: 0px 0px 1px 2px #bdbdbd;
+    cursor: pointer;
 }
 
 footer {
