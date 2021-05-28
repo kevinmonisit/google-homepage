@@ -2,8 +2,13 @@ html, body {
     height:100%;
 }
 
+.material-icons.md-dark {
+    color: rgba(146, 146, 146, 0.54);
+}
+
 :root {
     --font-color: rgb(54,54,54);
+    --nav-bar-font-size: 0.81rem;
 }
 
 #flex-wrapper {
@@ -43,7 +48,7 @@ html, body {
     /* border: 1px solid black; */
     width:100px;
 
-    font-size:0.79rem;
+    font-size: var(--nav-bar-font-size);
 }
 
 #header-right > button {
@@ -198,7 +203,8 @@ html, body {
 
 #close-icon {
     opacity: 0;
-    --input-focused: 0;
+    padding: 0 2px;
+    color:rgba(54, 54, 54, 0.637) !important;
 }
 
 #search-bar input:focus ~ #close-icon{
@@ -220,5 +226,39 @@ footer {
     flex-grow: 0;
     background-color: rgb(212, 212, 212);
     min-height:50px;
-    display:block;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration:none;
+
+    font-size: var(--nav-bar-font-size);
+}
+
+footer img[alt='Leaf Image'] {
+    height:14px;
+}
+
+footer a {
+    padding: 0 20px;
+    text-decoration:none;
+    color: rgb(87, 87, 87);
+}
+
+#mid-footer {
+    flex-grow:8;
+    text-align: center;
+}
+
+#left-footer {
+    margin-left:20px;
+}
+
+#right-footer {
+    margin-right:20px;
+}
+
+footer > div {
+
 }
