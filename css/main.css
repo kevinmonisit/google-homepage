@@ -9,6 +9,7 @@ html, body {
 :root {
     --font-color: rgb(54,54,54);
     --nav-bar-font-size: 0.81rem;
+    --footer-color: #f2f2f2;
 }
 
 #flex-wrapper {
@@ -100,8 +101,6 @@ html, body {
 #header-space {
     flex-grow:3;
     flex-shrink:1;
-    background-color: lawngreen;
-
 }
 
 #header-right {
@@ -123,7 +122,6 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    background-color: blue;
     flex-basis:350px;
     min-height:230px;
 }
@@ -144,12 +142,10 @@ html, body {
 
 #logo {
     width:500px;
-    background-color: red;
 }
 
 #space-main-content {
     width:100%;
-    background-color: cyan;
     flex-grow: 8;
     min-height:20px;
 }
@@ -185,7 +181,7 @@ html, body {
     height:20px;
     padding:10px;
 
-    border: 5px solid green;
+    border: 2px solid var(--footer-color);
     border-radius: 20px;
     outline-width:0;
 
@@ -199,6 +195,8 @@ html, body {
 
 #search-bar > input {
     flex-grow:3;
+    outline:none;
+    border:none;
 }
 
 #close-icon {
@@ -224,7 +222,7 @@ html, body {
 footer {
     width:100%;
     flex-grow: 0;
-    background-color: rgb(212, 212, 212);
+    background-color: var(--footer-color);
     min-height:50px;
     display:flex;
 
