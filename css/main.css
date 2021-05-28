@@ -8,7 +8,7 @@ html, body {
 
 :root {
     --font-color: rgb(54,54,54);
-    --nav-bar-font-size: 0.81rem;
+    --nav-bar-font-size: 0.9rem;
     --footer-color: #f2f2f2;
 }
 
@@ -56,8 +56,6 @@ html, body {
     color: white;
     border:none;
     border-radius:4px;
-
-    font-weight:300;
 
     background-color: #1a73e8;
     font-family: Arial, Helvetica, sans-serif;
@@ -166,12 +164,13 @@ html, body {
     border-radius: 3px;
     padding:10px 20px;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
     color: var(--font-color, grey);
 }
 
 #search-bar-buttons > button:hover{
-    box-shadow: 0px 0px 1px 2px #bdbdbd;
+    box-shadow: 0px 0px 1px 1px #bdbdbd;
     cursor: pointer;
 }
 
@@ -181,7 +180,7 @@ html, body {
     height:20px;
     padding:10px;
 
-    border: 2px solid var(--footer-color);
+    border: 1px solid rgb(202, 202, 202);
     border-radius: 20px;
     outline-width:0;
 
@@ -201,8 +200,12 @@ html, body {
 
 #close-icon {
     opacity: 0;
-    padding: 0 2px;
-    color:rgba(54, 54, 54, 0.637) !important;
+    padding-right:5px;
+    color:rgba(54, 54, 54, 0.747) !important;
+}
+
+#close-icon:hover {
+    cursor:pointer;
 }
 
 #search-bar input:focus ~ #close-icon{
@@ -214,9 +217,13 @@ html, body {
 }
 
 #search-mic {
-    padding-left:3px;
+    padding-left:5px;
     padding-top:4px;
     border-left: 1px solid rgba(207, 207, 207, 0);
+}
+
+#search-mic:hover {
+    cursor: pointer;
 }
 
 footer {
@@ -228,11 +235,11 @@ footer {
 
     align-items: center;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     text-decoration:none;
 
     font-size: var(--nav-bar-font-size);
-    color: rgb(87, 87, 87);
+    color: rgb(100, 100, 100);
 }
 
 footer img[alt='Leaf Image'] {
@@ -242,15 +249,23 @@ footer img[alt='Leaf Image'] {
 footer a {
     padding: 0 20px;
     text-decoration:none;
-    color: rgb(87, 87, 87);
+    color: rgb(100, 100, 100);
 }
 
 #mid-footer {
     flex-grow:8;
+}
+
+#carbon-neutral {
+    position:absolute;
+    left: 0;
+    bottom:15px;
+    width:100%;
+
     text-align: center;
 }
 
-@media (max-width:900px) {
+@media (max-width:1100px) {
     footer {
         min-height:60px;
         align-items: flex-end;
@@ -258,10 +273,14 @@ footer a {
         flex-wrap: nowrap;
     }
 
+    #carbon-neutral {
+        position:relative;
+    }
+
     #mid-footer {
         align-self: flex-start;
         white-space: nowrap;
-        padding-top:10px;
+        padding-top:30px;
     }
 
     #left-footer {
@@ -273,7 +292,7 @@ footer a {
     }
 }
 
-@media (max-width:800px) {
+@media (max-width:870px) {
     footer {
         flex-direction: column;
         align-items: center;
@@ -281,6 +300,12 @@ footer a {
 
     footer > div {
         margin: 10px 0;
+    }
+
+
+    #carbon-neutral {
+        position:relative;
+        bottom: 0;
     }
 
     #mid-footer {
