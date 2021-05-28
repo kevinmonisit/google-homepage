@@ -35,7 +35,15 @@
             This only a mockup so I won't put input into a form
             that is submittable.
              -->
-            <input id='search-bar'></input>
+            <div id='search-bar'>
+                <span id='search-icon' class='material-icons' style='margin-right:4px;'>search</span>
+                <input type="text">
+                <!-- When input in focus, show 'X' -->
+                <span class='material-icons' id='close-icon'>close</span>
+                <div id='search-mic'>
+                    <span id='search-icon' class='material-icons'>mic</span>
+                </div>
+            </div>
             <div id='search-bar-buttons'>
                 <button type='button'>
                     Google Search
@@ -43,7 +51,6 @@
                 <button type='button'>
                     I'm Feeling Lucky
                 </button>
-
             </div>
         </div>
 

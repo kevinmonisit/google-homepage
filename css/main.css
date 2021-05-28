@@ -132,12 +132,6 @@ html, body {
 
 }
 
-#search-bar {
-    width:500px;
-    background-color: green;
-
-}
-
 #top-header-wrapper {
     width:100%;
     display:flex;
@@ -183,14 +177,42 @@ html, body {
 #search-bar {
     max-width:570px;
     width:90vw;
-    padding: 8px 0;
+    height:20px;
+    padding:10px;
 
     border: 5px solid green;
     border-radius: 20px;
     outline-width:0;
 
-    padding-left:30px;
+    padding-left:10px;
     font-family: Arial, Helvetica, sans-serif;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-bar > input {
+    flex-grow:3;
+}
+
+#close-icon {
+    opacity: 0;
+    --input-focused: 0;
+}
+
+#search-bar input:focus ~ #close-icon{
+    opacity: 1;
+}
+
+#search-bar input:focus ~ #search-mic{
+    border-left: 1px solid rgba(207, 207, 207, 1);
+}
+
+#search-mic {
+    padding-left:3px;
+    padding-top:4px;
+    border-left: 1px solid rgba(207, 207, 207, 0);
 }
 
 footer {
